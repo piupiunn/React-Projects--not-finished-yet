@@ -1,18 +1,12 @@
-import React from "react";
-import { useState } from "react";
-function App() {
-  const [name, setName] = useState("Caner");
+import { React, useState } from "react";
+import Title from "./input-form/components/Title";
+import Second from "./Second";
 
-  const nameHandler = () => {
-    setName("Usul");
-  };
-
+export default function App() {
   return (
     <div>
-      <h2>Selam {name}</h2>
-      <button onClick={nameHandler}>İsmi değiştir</button>
+      <Title />
+      <Second />
     </div>
   );
 }
-
-export default App;
