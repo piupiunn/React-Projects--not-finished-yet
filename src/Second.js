@@ -4,6 +4,8 @@ import EventList from "./EventList";
 import Modal from "./input-form/components/Modal";
 import NewEventForm from "./NewEventForm";
 
+import "./Second.css";
+
 export default function Second() {
   const [showEvents, hideEvents] = useState(true);
 
@@ -32,6 +34,9 @@ export default function Second() {
 
   return (
     <>
+      <div className="add-event-button">
+        <button onClick={() => setShowModal(true)}>Add event</button>
+      </div>
       {showEvents && (
         <div>
           <button onClick={() => hideEvents(false)}>Hide events</button>
@@ -51,9 +56,6 @@ export default function Second() {
           <NewEventForm addEvent={addEvent} />
         </Modal>
       )}
-      <div>
-        <button onClick={() => setShowModal(true)}>Add event</button>
-      </div>
     </>
   );
 }

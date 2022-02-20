@@ -1,14 +1,14 @@
 import { React, useState } from "react";
 
 export default function Title() {
-  const [name, SetName] = useState("Caner");
+  const [name, SetName] = useState("");
 
   const handleName = () => {
-    SetName("Usul");
+    SetName("");
   };
   return (
     <div>
-      <h1>Selam {name}</h1>
+      <h1>Top Threes of My Life {name}</h1>
       <button onClick={handleName}>İsmi değiştir</button>
     </div>
   );
